@@ -34,7 +34,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('mvn/pom.xml') }}
+          key: ${{ runner.os }}-m2-${{ hashFiles('Maven_First_Project_Demo/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
       - name: Build and analyze
@@ -44,4 +44,4 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        working-directory: mvn
+        working-directory: Maven_First_Project_Demo
